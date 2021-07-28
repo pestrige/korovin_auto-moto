@@ -1,0 +1,22 @@
+.list {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.item:not(:first-child) {
+  margin-left: 69px;
+}
+
+.link {
+  font-family: var(--font-medium);
+  color: var(--color-dark);
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

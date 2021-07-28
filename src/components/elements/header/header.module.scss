@@ -1,0 +1,14 @@
+.header {
+  min-height: 84px;
+  background-color: var(--color-background);
+}
+
+.wrapper {
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 2px;
+}
