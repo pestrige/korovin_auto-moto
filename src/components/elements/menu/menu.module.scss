@@ -3,12 +3,14 @@
   padding-left: 0;
   display: flex;
   justify-content: flex-end;
+  column-gap: 69px;
   align-items: center;
   list-style: none;
-}
 
-.item:not(:first-child) {
-  margin-left: 69px;
+  &__footer {
+    justify-content: center;
+    column-gap: 65px;
+  }
 }
 
 .link {

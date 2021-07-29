@@ -1,17 +1,17 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Main from '../pages/main/main';
-import NotFound from '../pages/not-found/not-found';
+import MainPage from '../pages/main-page/main-page';
+import NotFoundPage from '../pages/not-found-page/not-found-page';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path='/'>
-          <Main/>
+          <MainPage/>
         </Route>
         <Route>
-          <NotFound/>
+          <NotFoundPage/>
         </Route>
       </Switch>
     </BrowserRouter>

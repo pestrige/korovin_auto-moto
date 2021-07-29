@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../elements/header/header';
 
-export default function NotFound() {
+export default function NotFoundPage() {
   return (
     <div>
       <Header />
