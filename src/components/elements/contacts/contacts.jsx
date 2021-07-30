@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './contacts.module.scss';
-import myMap from './my-map';
+import CustomMap from './custom-map';
 
 export default function Contacts() {
   return (
@@ -27,7 +27,7 @@ export default function Contacts() {
         </li>
       </ul>
       <div className={styles.map_wrapper}>
-        {myMap()}
+        <CustomMap />
       </div>
     </div>
   );
