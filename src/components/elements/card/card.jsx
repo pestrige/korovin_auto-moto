@@ -35,6 +35,7 @@ export default function Card() {
           </div>
         </div>
         <div className={styles.actions}>
+          {/* TODO: replace Button to Link */}
           <Button classStyle={styles.align_self}>
             Оставить заявку
           </Button>

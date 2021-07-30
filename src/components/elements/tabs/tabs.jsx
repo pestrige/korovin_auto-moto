@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import styles from './tabs.module.scss';
 import classNames from 'classnames';
+import Specs from '../specs/specs';
+import Contacts from '../contacts/contacts';
 
 const RADIX = 36;
 const TabName = {
@@ -50,9 +52,9 @@ export default function Tabs() {
         ))}
       </ul>
       <div className={styles.tab_content}>
-        {activeTab === TabName.SPECS && <div>SPECS COMPONENT</div>}
+        {activeTab === TabName.SPECS && <div><Specs /></div>}
         {activeTab === TabName.REVIEWS && <div>REVIEWS COMPONENT</div>}
-        {activeTab === TabName.CONTACTS && <div>CONTACTS COMPONENT</div>}
+        {activeTab === TabName.CONTACTS && <div><Contacts /></div>}
       </div>
     </div>
   );
