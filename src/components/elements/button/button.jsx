@@ -3,31 +3,53 @@ import PropTypes from 'prop-types';
 import styles from './button.module.scss';
 import classNames from 'classnames';
 import {ButtonStyle} from '../../../const';
+import {Link} from 'react-router-dom';
 
 export default function Button({
   children,
-  style= ButtonStyle.DEFAULT,
+  variant= ButtonStyle.DEFAULT,
   type = 'button',
   classStyle = '',
-}) {
-  return (
-    <button
-      type={type}
-      className={classNames(
-        styles.button,
-        {[styles.default]: style === ButtonStyle.DEFAULT},
-        {[styles.outlined]: style === ButtonStyle.OUTLINED},
-        classStyle,
-      )}
-    >
-      {children}
-    </button>
-  );
+  isLink = false,
+  path = '/',
+  onClick }) {
+
+  return isLink
+    ? (
+      <Link
+        to={path}
+        className={classNames(
+          styles.button,
+          {[styles.default]: variant === ButtonStyle.DEFAULT},
+          {[styles.outlined]: variant === ButtonStyle.OUTLINED},
+          classStyle,
+        )}
+      >
+        {children}
+      </Link>
+    )
+    : (
+      <button
+        type={type}
+        className={classNames(
+          styles.button,
+          {[styles.default]: variant === ButtonStyle.DEFAULT},
+          {[styles.outlined]: variant === ButtonStyle.OUTLINED},
+          classStyle,
+        )}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    );
 }
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   type: PropTypes.string,
-  style: PropTypes.string,
+  variant: PropTypes.string,
   classStyle: PropTypes.string,
+  path: PropTypes.string,
+  isLink: PropTypes.bool,
+  onClick: PropTypes.func,
 };

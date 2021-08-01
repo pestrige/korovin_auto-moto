@@ -5,6 +5,7 @@ import CustomMap from './custom-map';
 export default function Contacts() {
   return (
     <div className={styles.wrapper}>
+      <h3 className='visually-hidden'>Контакты</h3>
       <ul className={styles.list}>
         <li className={styles.item}>
           <strong>Адрес</strong>
