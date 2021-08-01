@@ -1,0 +1,20 @@
+.list {
+  width: 585px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.term {
+  padding-top: 20px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.def {
+  margin: 0 20px 0 0;
+  padding-top: 20px;
+  padding-bottom: 7px;
+  text-align: right;
+  border-bottom: 1px solid var(--color-light);
+}

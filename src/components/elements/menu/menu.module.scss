@@ -1,0 +1,25 @@
+.list {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  column-gap: 69px;
+  align-items: center;
+  list-style: none;
+
+  &__footer {
+    justify-content: center;
+    column-gap: 65px;
+  }
+}
+
+.link {
+  font-family: var(--font-medium);
+  color: var(--color-dark);
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
