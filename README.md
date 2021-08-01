@@ -11,3 +11,6 @@
  - Redux / Redux Toolkit
  - SCSS, CSS Modules
 ---
+
+Превью:
+![alt text](screenshot.jpg "Превью проекта")
