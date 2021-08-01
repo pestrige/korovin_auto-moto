@@ -66,6 +66,11 @@
   border: 1px solid var(--color-light);
   border-radius: 50%;
   cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:not(:disabled):hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
 
   &:disabled {
     cursor: default;

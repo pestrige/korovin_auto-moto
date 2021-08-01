@@ -15,7 +15,7 @@ export default function Card() {
   return (
     <article className={styles.article}>
       <div className={styles.specs}>
-        <h2 className={styles.title}>Марпех 11</h2>
+        <h3 className={styles.title}>Марпех 11</h3>
         <ul className={styles.features}>
           {FEATURES.map(({id, title}) => (
             <li
@@ -36,10 +36,10 @@ export default function Card() {
         </div>
         <div className={styles.actions}>
           {/* TODO: replace Button to Link */}
-          <Button classStyle={styles.align_self}>
+          <Button isLink path='/order' classStyle={styles.align_self}>
             Оставить заявку
           </Button>
-          <Button style={ButtonStyle.OUTLINED}>
+          <Button isLink path='/credit' variant={ButtonStyle.OUTLINED}>
             В КРЕДИТ ОТ 11 000 ₽
           </Button>
         </div>
