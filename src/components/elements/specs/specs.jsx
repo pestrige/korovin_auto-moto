@@ -14,17 +14,20 @@ const specs = [
 export default function Specs() {
 
   return (
-    <dl className={styles.list}>
-      {specs.map(({id, term, def}) => (
-        <React.Fragment key={id}>
-          <dt key={term.replace(/\s/g, '') + id} className={styles.term}>
-            {term}
-          </dt>
-          <dd key={def.replace(/\s/g, '') + id} className={styles.def}>
-            {def}
-          </dd>
-        </React.Fragment>
-      ))}
-    </dl>
+    <>
+      <h3 className='visually-hidden'>Характеристики</h3>
+      <dl className={styles.list}>
+        {specs.map(({id, term, def}) => (
+          <React.Fragment key={id}>
+            <dt key={term.replace(/\s/g, '') + id} className={styles.term}>
+              {term}
+            </dt>
+            <dd key={def.replace(/\s/g, '') + id} className={styles.def}>
+              {def}
+            </dd>
+          </React.Fragment>
+        ))}
+      </dl>
+    </>
   );
 }

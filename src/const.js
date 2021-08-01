@@ -1,3 +1,5 @@
+export const STARS_COUNT = 5;
+
 export const MenuType = {
   HEADER: 'top',
   FOOTER: 'footer',
