@@ -8,6 +8,10 @@
   display: flex;
   align-items: center;
   list-style: none;
+
+  @media (max-width: 930px) {
+    margin-bottom: 30px;
+  }
 }
 
 .tab {
@@ -29,8 +33,4 @@
   color: white;
   background-color: var(--color-accent);
   border-color: var(--color-accent);
-}
-
-.tab_content {
-
 }

@@ -1,5 +1,5 @@
 .wrapper {
-  width: 780px;
+  max-width: 780px;
   display: flex;
   justify-content: space-between;
 }
@@ -18,7 +18,7 @@
 }
 
 .item strong {
-  display: inline-block;
+  display: block;
   margin-bottom: 9px;
   font-family: var(--font-bold);
   font-size: 16px;

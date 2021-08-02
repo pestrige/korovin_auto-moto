@@ -15,15 +15,15 @@ export default function Contacts() {
           </address>
         </li>
         <li className={styles.item}>
-          <strong>Режим работы</strong><br/>
+          <strong>Режим работы</strong>
           <span>Ежедневно, с 10:00 до 21:00</span>
         </li>
         <li className={styles.item}>
-          <strong>Телефон</strong><br/>
+          <strong>Телефон</strong>
           <a href='tel:88003335599'>8 (800) 333-55-99</a>
         </li>
         <li className={styles.item}>
-          <strong>E-mail</strong><br/>
+          <strong>E-mail</strong>
           <a href='mailto:info@avto-moto.ru'>info@avto-moto.ru</a>
         </li>
       </ul>

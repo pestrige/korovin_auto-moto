@@ -1,7 +1,15 @@
 .card_wrapper {
   margin-bottom: 85px;
+
+  @media (max-width: 930px) {
+    margin-bottom: 30px;
+  }
 }
 
 .specs_wrapper {
   margin-bottom: 146px;
+
+  @media (max-width: 930px) {
+    margin-bottom: 80px;
+  }
 }

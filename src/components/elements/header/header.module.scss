@@ -1,7 +1,17 @@
 .header {
-  min-height: 84px;
   margin-bottom: 75px;
+  padding-bottom: 10px;
   background-color: var(--color-background);
+
+  @media (max-width: 930px) {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 75px;
+    margin-bottom: 6px;
+  }
 }
 
 .wrapper {
@@ -13,4 +23,8 @@
 .logo {
   margin-top: 2px;
   flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 }
