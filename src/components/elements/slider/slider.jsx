@@ -6,6 +6,10 @@ import { ControlDirection } from '../../../const';
 
 const SLIDE_COUNT = 3;
 const RADIX = 36;
+const PreviewSize = {
+  WIDTH: 128,
+  HEIGHT: 80,
+};
 const slides = new Array(SLIDE_COUNT).fill('')
   .map(() => Math.random().toString(RADIX));
 const previews = new Array(SLIDE_COUNT).fill('')
@@ -25,20 +29,29 @@ export default function Slider() {
             key={slideKey}
             className={classNames(
               styles.slide,
+              styles.slide__new,
               {[styles.active]: id === slideIndex},
             )}
           >
             <picture>
               <source
                 type='image/webp'
+                srcSet={`${process.env.PUBLIC_URL}/images/slide${id}_tablet.webp 1x, ${process.env.PUBLIC_URL}/images/slide${id}_tablet@2x.webp 2x`}
+                media='(max-width: 930px)'
+              />
+              <source
+                type='image/webp'
                 srcSet={`${process.env.PUBLIC_URL}/images/slide${id}.webp 1x, ${process.env.PUBLIC_URL}/images/slide${id}@2x.webp 2x`}
               />
+              <source
+                srcSet={`${process.env.PUBLIC_URL}/images/slide${id}_tablet.jpg 1x, ${process.env.PUBLIC_URL}/images/slide${id}_tablet@2x.jpg 2x`}
+                media='(max-width: 930px)'
+              />
               <img
+                className={styles.img}
                 src={`${process.env.PUBLIC_URL}/images/slide${id}.jpg`}
                 srcSet={`${process.env.PUBLIC_URL}/images/slide${id}@2x.jpg 2x`}
                 alt={`slide ${id}`}
-                width={600}
-                height={375}
               />
             </picture>
           </li>
@@ -61,8 +74,8 @@ export default function Slider() {
                 <img
                   src={`${process.env.PUBLIC_URL}/images/preview${id}.jpg`}
                   srcSet={`${process.env.PUBLIC_URL}/images/preview${id}@2x.jpg 2x`}
-                  width={128}
-                  height={80}
+                  width={PreviewSize.WIDTH}
+                  height={PreviewSize.HEIGHT}
                   alt={`preview ${id}`}
                 />
               </picture>

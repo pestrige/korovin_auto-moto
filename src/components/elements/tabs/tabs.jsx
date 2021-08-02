@@ -52,11 +52,9 @@ export default function Tabs() {
           </li>
         ))}
       </ul>
-      <div className={styles.tab_content}>
-        {activeTab === TabName.SPECS && <div><Specs /></div>}
-        {activeTab === TabName.REVIEWS && <div><Reviews /></div>}
-        {activeTab === TabName.CONTACTS && <div><Contacts /></div>}
-      </div>
+      {activeTab === TabName.SPECS && <div><Specs /></div>}
+      {activeTab === TabName.REVIEWS && <div><Reviews /></div>}
+      {activeTab === TabName.CONTACTS && <div><Contacts /></div>}
     </div>
   );
 }
