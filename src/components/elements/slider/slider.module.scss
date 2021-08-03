@@ -57,7 +57,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 31px;
 }
 
 .previews {
@@ -65,11 +64,15 @@
   padding-left: 0;
   display: flex;
   justify-content: center;
-  column-gap: 25px;
   list-style: none;
 }
 
+.preview:not(:last-child) {
+  margin-right: 25px;
+}
+
 .control {
+  margin-right: 31px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +105,12 @@
     opacity: 0.3;
   }
 
-  &__next::before {
-    transform: rotate(180deg);
+  &__next {
+    margin-right: 0;
+    margin-left: 31px;
+
+    &::before {
+      transform: rotate(180deg);
+    }
   }
 }

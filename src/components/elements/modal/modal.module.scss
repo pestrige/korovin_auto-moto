@@ -83,11 +83,11 @@
 
 .rating_wrapper {
   display: flex;
-  column-gap: 14px;
   align-items: center;
 }
 
 .rating_title {
+  margin-right: 14px;
   padding-bottom: 10px;
   font-family: var(--font-medium);
   font-size: 15px;
@@ -99,11 +99,14 @@
   padding-bottom: 7px;
   display: flex;
   flex-direction: row-reverse;
-  column-gap: 8px;
 }
 
 .rating_label {
   cursor: pointer;
+
+  &:not(:first-of-type) {
+    margin-right: 8px;
+  }
 }
 
 .radio:checked ~.rating_label .star,

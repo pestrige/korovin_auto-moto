@@ -54,6 +54,11 @@
       margin-right: 15px;
     }
   }
+  &:nth-child(3) {
+    @media (max-width: 930px) {
+      margin-right: 0px;
+    }
+  }
 
   &::before {
     content: "";
@@ -147,14 +152,18 @@
 .actions {
   display: inline-flex;
   flex-direction: column;
-  row-gap: 16px;
 
   @media (max-width: 930px) {
     flex-direction: row;
-    column-gap: 30px;
   }
 }
 
-.align_self {
+.first_button {
   align-self: flex-start;
+  margin-bottom: 16px;
+
+  @media (max-width: 930px) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
 }

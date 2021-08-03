@@ -35,8 +35,7 @@ export default function Card() {
           </div>
         </div>
         <div className={styles.actions}>
-          {/* TODO: replace Button to Link */}
-          <Button isLink path='/order' classStyle={styles.align_self}>
+          <Button isLink path='/order' classStyle={styles.first_button}>
             Оставить заявку
           </Button>
           <Button isLink path='/credit' variant={ButtonStyle.OUTLINED}>
