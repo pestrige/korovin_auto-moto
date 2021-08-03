@@ -74,7 +74,7 @@ export default function Reviews() {
                   Достоинства
                 </strong>
                 <ul className={styles.features}>
-                  <li>
+                  <li className={styles.features_item}>
                     {advantages}
                   </li>
                 </ul>

@@ -4,14 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  column-gap: 69px;
   align-items: center;
   list-style: none;
 
   &__footer {
     justify-content: center;
-    column-gap: 65px;
-    row-gap: 20px;
 
     @media (max-width: 930px) {
       padding-right: 28px;
@@ -24,10 +21,23 @@
 
 .list__footer .item {
   padding: 0;
+  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-right: 65px;
+
+    @media (max-width: 930px) {
+      margin-right: 0;
+    }
+  }
 }
 
 .item {
   padding: 20px 0;
+
+  &:not(:last-child) {
+    margin-right: 69px;
+  }
 }
 
 .link {

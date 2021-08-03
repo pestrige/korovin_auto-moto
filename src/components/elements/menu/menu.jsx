@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import {MenuType} from '../../../const';
 
 const HEADER_MENU_ITEMS = [
-  {name: 'Автомобили', link: '/auto'},
+  {name: 'Автомобили', link: '/'},
   {name: 'Контакты', link: '/contacts'},
   {name: 'Услуги', link: '/services'},
   {name: 'Вакансии', link: '/job'},

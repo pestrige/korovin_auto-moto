@@ -65,7 +65,7 @@ export default function Slider() {
         />
         <ul className={styles.previews}>
           {previews.map((previewKey, id) => (
-            <li key={previewKey}>
+            <li key={previewKey} className={styles.preview}>
               <picture>
                 <source
                   type='image/webp'

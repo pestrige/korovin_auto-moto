@@ -14,6 +14,7 @@ export default function Control({onClick, direction, disabled}) {
       type='button'
       onClick={onClick}
       disabled={disabled}
+      aria-label={direction === ControlDirection.NEXT ? 'кнопка следующего слайда' : 'кнопка предыдущего слайда'}
     />
   );
 }
